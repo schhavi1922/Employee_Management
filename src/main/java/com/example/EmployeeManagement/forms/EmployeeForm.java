@@ -23,7 +23,7 @@ public class EmployeeForm {
     private String email;
 
     @NotBlank(message = "At least one phone number is required")
-    private Set<@Valid Integer> phoneNumbers;
+    private int phoneNumbers;
 
     @NotNull(message = "Date of joining cannot be null")
     private LocalDate dateOfJoining;
@@ -55,11 +55,11 @@ public class EmployeeForm {
         this.email = email;
     }
 
-    public Set<Integer> getPhoneNumbers() {
+    public int getPhoneNumbers() {
         return phoneNumbers;
     }
 
-    public void setPhoneNumbers(Set<Integer> phoneNumbers) {
+    public void setPhoneNumbers(int phoneNumbers) {
         this.phoneNumbers = phoneNumbers;
     }
 

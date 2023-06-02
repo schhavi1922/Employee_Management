@@ -14,13 +14,13 @@ public class EmployeeDto {
 
     private String email;
 
-    private List<Integer> phoneNumber;
+    private int phoneNumber;
 
     private LocalDate dateOfJoining;
 
     private Long salary;
 
-    public EmployeeDto(Long employeeId, String firstName, String lastName, String email, List<Integer> phoneNumber,
+    public EmployeeDto(Long employeeId, String firstName, String lastName, String email, int phoneNumber,
                        LocalDate dateOfJoining, Long salary) {
         this.employeeId = employeeId;
         this.firstName = firstName;
@@ -67,11 +67,11 @@ public class EmployeeDto {
         this.email = email;
     }
 
-    public List<Integer> getPhoneNumber() {
+    public int getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(List<Integer> phoneNumber) {
+    public void setPhoneNumber(int phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 

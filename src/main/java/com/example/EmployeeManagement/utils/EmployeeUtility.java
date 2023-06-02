@@ -4,12 +4,14 @@ import com.example.EmployeeManagement.dto.EmployeeDto;
 import com.example.EmployeeManagement.dto.EmployeeTaxDto;
 import com.example.EmployeeManagement.entity.Employee;
 import com.example.EmployeeManagement.forms.EmployeeForm;
+import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
 import java.time.Month;
 import java.time.Period;
 import java.util.List;
 
+@Component
 public class EmployeeUtility {
 
 
@@ -30,7 +32,7 @@ public class EmployeeUtility {
         employeeDto.setFirstName(employee.getFirstName());
         employeeDto.setLastName(employee.getLastName());
         employeeDto.setEmail(employee.getEmail());
-        employeeDto.setPhoneNumber((List<Integer>) employee.getPhoneNumber());
+        employeeDto.setPhoneNumber(employee.getPhoneNumber());
         employeeDto.setDateOfJoining(employee.getDateOfJoining());
         employeeDto.setSalary(employee.getSalary());
         return employeeDto;

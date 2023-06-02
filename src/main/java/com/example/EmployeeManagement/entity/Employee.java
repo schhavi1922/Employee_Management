@@ -1,5 +1,6 @@
 package com.example.EmployeeManagement.entity;
 
+
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.Set;
@@ -22,8 +23,8 @@ public class Employee {
     @Column(name = "email")
     private String email;
 
-    @OneToMany(mappedBy = "employee", cascade = CascadeType.ALL)
-    private Set<Integer> phoneNumber;
+    @Column(name = "phone")
+    private int phoneNumber;
 
     @Column(name = "date_of_joining")
     private LocalDate dateOfJoining;
@@ -63,11 +64,11 @@ public class Employee {
         this.email = email;
     }
 
-    public Set<Integer> getPhoneNumber() {
+    public int getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(Set<Integer> phoneNumber) {
+    public void setPhoneNumber(int phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
